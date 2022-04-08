@@ -8,7 +8,46 @@
   bottom: 1px;
   align-items: center;
 }
-
 label {
   display: block;
+}
+.page-Header img {
+  width: 1.8%;
+}
+#left-star1 {
+  position: relative;
+  left: 41%;
+  top: 47px;
+}
+#left-star2 {
+  position: relative;
+  left: 37%;
+  top: 47px;
+}
+#left-star3 {
+  position: relative;
+  left: 33%;
+  top: 47px;
+}
+#right-star1 {
+  position: relative;
+  left: 57.25%;
+  bottom: 54px;
+}
+#right-star2 {
+  position: relative;
+  left: 57.25%;
+  bottom: 54px;
+}
+#right-star3 {
+  position: relative;
+  left: 57.25%;
+  bottom: 54px;
+}
+.page-Header h1 {
+  text-align: center;
+  background-color: white;
+}
+.page-Header  {
+  background: rgb(164, 0, 0);
 }
