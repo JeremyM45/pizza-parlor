@@ -29,5 +29,8 @@ $(document).ready(function()  {
     $("input:checked").each(function() {
       toppings.push($(this).val());
     })
+    const newPizza = new Pizza(size, toppings)
+    newPizza.cost()
+    $("#display").text(newPizza.size + " Pizza with " + newPizza.toppings + " price: $" + newPizza.price)
   })
 })
