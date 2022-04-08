@@ -20,3 +20,14 @@ Pizza.prototype.cost  = function()  {
   this.price = this.price.toFixed(2)
   return this.price
 };
+
+$(document).ready(function()  {
+  $("form#pizza").submit(function(e)  {
+    e.preventDefault()
+    let size = $("#size").val();
+    let toppings = []
+    $("input:checked").each(function() {
+      toppings.push($(this).val());
+    })
+  })
+})
