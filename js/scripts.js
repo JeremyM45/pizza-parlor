@@ -13,4 +13,7 @@ Pizza.prototype.cost  = function()  {
   } else if (this.size === "X-large") {
     this.price += 18.99
   }
+  if (this.toppings.length === 1)  {
+    this.price += 1.50
+  }
 };

@@ -14,14 +14,14 @@ expected output: 12.99
 Test: "It should apply the cost for a topping"
 code: const newPizza = new Pizza("medium", ["olives"])
       newPizza.cost()
-expected output: 13.49
+expected output: 14.49
 
 Test: "It should apply the cost for multiple toppings"
 code: const newPizza = new Pizza("medium", ["olives", "pepperoni", "green onions"])
       newPizza.cost()
-expected output: 16.49
+expected output: 17.49
 
 Test: "It should calculate a sales tax"
 code: const newPizza = new Pizza("medium", ["olives", "pepperoni", "green onions"])
       newPizza.cost()
-expected output: 17.64
+expected output: 18.71
