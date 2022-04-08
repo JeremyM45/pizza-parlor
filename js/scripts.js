@@ -16,6 +16,7 @@ Pizza.prototype.cost  = function()  {
   for (i = 0; i < this.toppings.length; i++)  {
     this.price += 1.50
   }
+  this.price *= 1.07
   this.price = this.price.toFixed(2)
   return this.price
 };
