@@ -1,0 +1,14 @@
+.btn  {
+  border: 1px solid black;
+}
+.btn:hover  {
+  background-color: antiquewhite;
+}
+#toppings input{
+  bottom: 1px;
+  align-items: center;
+}
+
+label {
+  display: block;
+}
