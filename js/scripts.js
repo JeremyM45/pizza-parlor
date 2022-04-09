@@ -38,5 +38,6 @@ $(document).ready(function()  {
     displayToppings.text("Toppings: " + newPizza.toppings)
     displayPrice.text("Price: $" + newPizza.price)
     $(".col-lg-6 img").show();
+    $("#ComeON").get(0).play();
   })
 })
