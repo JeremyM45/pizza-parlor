@@ -1,4 +1,4 @@
-Describe: Pizza()
+Describe: Pizza(size, toppings)
 
 Test: "It should create a new pizza object with size and toppings.
 code: const newPizza = new Pizza("medium", ["olives", "pepperoni"])
@@ -31,3 +31,11 @@ Describe: PizzaIndex()
 Test: "It should create an object that contains an index of Pizza objects"
 code: let newIndex = new PizzaIndex()
 expected output: newIndex([])
+
+Describe: PizzaIndex.prototype.addPizza(pizza)
+
+Test: "It should add a pizza object to a PizzaIndex object's pizzas array."
+code: let newIndex = new PizzaIndex()
+      const newPizza = new Pizza("medium", ["olives", "pepperoni", "green onions"])
+      newIndex.addPizza(newPizza)
+expected output: newIndex([newPizza])

@@ -1,3 +1,9 @@
+function PizzaIndex() {
+  this.pizzas = []
+}
+PizzaIndex.prototype.addPizza = function(pizza)  {
+  this.pizzas.push(pizza);
+};  
 function Pizza(size, toppings)  {
   this.size = size;
   this.toppings = toppings;
