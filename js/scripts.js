@@ -4,7 +4,11 @@ function PizzaIndex() {
 }
 PizzaIndex.prototype.addPizza = function(pizza)  {
   this.pizzas.push(pizza);
-};  
+};
+PizzaIndex.prototype.pizzaId = function() {
+  this.id += 1
+  return this.id
+}; 
 function Pizza(size, toppings)  {
   this.size = size;
   this.toppings = toppings;
