@@ -4,13 +4,13 @@ function Pizza(size, toppings)  {
   this.price = 0
 }
 Pizza.prototype.cost  = function()  {
-  if (this.size === "small")  {
+  if (this.size === "Small")  {
     this.price += 9.99
-  } else if (this.size === "medium")  {
+  } else if (this.size === "Medium")  {
     this.price += 12.99
-  } else if (this.size === "large")  {
+  } else if (this.size === "Large")  {
     this.price += 15.99
-  } else if (this.size === "X-large") {
+  } else if (this.size === "X-Large") {
     this.price += 18.99
   }
   for (i = 0; i < this.toppings.length; i++)  {
@@ -37,7 +37,6 @@ $(document).ready(function()  {
     displaySize.text(newPizza.size + " Pizza")
     displayToppings.text("Toppings: " + newPizza.toppings)
     displayPrice.text("Price: $" + newPizza.price)
-    $(".col-lg-6 img").show();
     $("#ComeON").get(0).play();
   })
 })

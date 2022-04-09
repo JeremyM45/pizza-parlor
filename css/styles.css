@@ -16,32 +16,32 @@ label {
 }
 #left-star1 {
   position: relative;
-  left: 41%;
+  left: 39.5%;
   top: 47px;
 }
 #left-star2 {
   position: relative;
-  left: 37%;
+  left: 35.5%;
   top: 47px;
 }
 #left-star3 {
   position: relative;
-  left: 33%;
+  left: 31.5%;
   top: 47px;
 }
 #right-star1 {
   position: relative;
-  left: 57.25%;
+  left: 58.75%;
   bottom: 54px;
 }
 #right-star2 {
   position: relative;
-  left: 57.25%;
+  left: 58.75%;
   bottom: 54px;
 }
 #right-star3 {
   position: relative;
-  left: 57.25%;
+  left: 58.75%;
   bottom: 54px;
 }
 .page-Header h1 {
@@ -51,9 +51,7 @@ label {
 .page-Header  {
   background: rgb(164, 0, 0);
 }
-.col-lg-6 img {
-  display: none;
-}
-#toppings {
-  border: 2px solid black;
+h1 {
+  font-family: Palatino, URW Palladio L, serif;
+  color: red;
 }
