@@ -51,3 +51,9 @@ label {
 .page-Header  {
   background: rgb(164, 0, 0);
 }
+.col-lg-6 img {
+  display: none;
+}
+#toppings {
+  border: 2px solid black;
+}

@@ -22,6 +22,9 @@ Pizza.prototype.cost  = function()  {
 };
 
 $(document).ready(function()  {
+  let displaySize = $("#display-size")
+  let displayToppings = $("#display-toppings")
+  let displayPrice = $("#display-price")
   $("form#pizza").submit(function(e)  {
     e.preventDefault()
     let size = $("#size").val();
@@ -31,8 +34,9 @@ $(document).ready(function()  {
     })
     const newPizza = new Pizza(size, toppings)
     newPizza.cost()
-    $("#display-size").text("A " + newPizza.size + " Pizza")
-    $("#display-toppings").text("Toppings: " + newPizza.toppings)
-    $("#display-price").text("Price: $" + newPizza.price)
+    displaySize.text(newPizza.size + " Pizza")
+    displayToppings.text("Toppings: " + newPizza.toppings)
+    displayPrice.text("Price: $" + newPizza.price)
+    $(".col-lg-6 img").show();
   })
 })
