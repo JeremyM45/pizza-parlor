@@ -2,7 +2,14 @@
   border: 1px solid black;
 }
 .btn:hover  {
-  background-color: antiquewhite;
+  background-color: red;
+  transition: all 0.5s;
+  transform: scale(1.25);
+  
+}
+#toppings input:hover{
+  transition: all 0.5s;
+  transform: scale(1.25);
 }
 #toppings input{
   bottom: 1px;
@@ -54,4 +61,13 @@ label {
 h1 {
   font-family: Palatino, URW Palladio L, serif;
   color: red;
+}
+#pizza p {
+  margin-top: 4%;
+}
+#toppings {
+  font-family: Palatino, URW Palladio L, serif;
+}
+.col-lg-6 img {
+  display: none;
 }

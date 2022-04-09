@@ -21,6 +21,7 @@
     <div class="row">
       <div class="col-lg-6">
         <form id="pizza">
+          <p>Size</p>
           <select id="size">
             <option val="Small">Small 10"</option>
             <option val="Medium">Medium 12"</option>
@@ -28,57 +29,58 @@
             <option val="X-Large">X-Large 16"</option>
           </select>
           <div id="toppings">
+            <p>Toppings</p>
             <div class="row">
               <div class="col-lg-3">
                 <label>
-                  <input type="checkbox" value="Pepperoni"> Pepperoni
+                  <input type="checkbox" value=" Pepperoni"> Pepperoni
                 </label>
                 <label>
-                  <input type="checkbox" value="Olives"> Olives
+                  <input type="checkbox" value=" Olives"> Olives
                 </label>
                 <label>
-                  <input type="checkbox" value="Green Onions"> Green Onions
+                  <input type="checkbox" value=" Green Onions"> Green Onions
                 </label>
                 <label>
-                  <input type="checkbox" value="Anchovies"> Anchovies
+                  <input type="checkbox" value=" Anchovies"> Anchovies
                 </label>
                 <label>
-                  <input type="checkbox" value="Mushroom"> Mushroom
+                  <input type="checkbox" value=" Mushroom"> Mushroom
                 </label>
                 <label>
-                  <input type="checkbox" value="Extra Cheese"> Extra Cheese
+                  <input type="checkbox" value=" Extra Cheese"> Extra Cheese
                 </label>
               </div>
               <div class="col-lg-3">
                 <label>
-                  <input type="checkbox" value="Sausage"> Sausage
+                  <input type="checkbox" value=" Sausage"> Sausage
                 </label>
                 <label>
-                  <input type="checkbox" value="Green Peppers"> Green Peppers
+                  <input type="checkbox" value=" Green Peppers"> Green Peppers
                 </label>
                 <label>
-                  <input type="checkbox" value="Garlic"> Garlic
+                  <input type="checkbox" value=" Garlic"> Garlic
                 </label>
                 <label>
-                  <input type="checkbox" value="Tomato"> Tomato
+                  <input type="checkbox" value=" Tomato"> Tomato
                 </label>
                 <label>
-                  <input type="checkbox" value="Fresh Basil"> Fresh Basil
+                  <input type="checkbox" value=" Fresh Basil"> Fresh Basil
                 </label>
                 <label>
-                  <input type="checkbox" value="Canadian Bacon"> Canadian Bacon
+                  <input type="checkbox" value=" Canadian Bacon"> Canadian Bacon
                 </label>
               </div>
             </div>
           </div>
-          <button type="submit", class="btn">Pizza Time</button>
+          <button type="submit", class="btn">Pizza Goin' Out</button>
         </form>
       </div>
       <div class="col-lg-6">
         <h4 id="display-size"></h4>
         <h4 id="display-toppings"></h4>
         <h4 id="display-price"></h4>
-        <img src="img/panucci.jfif">
+        <img src="img/panucci.jfif" id="panucci">
         <audio type="audio" src="audio/Pizza-going-out.mp3" id="ComeON"></audio>
       </div>
     </div>
