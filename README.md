@@ -25,3 +25,9 @@ Test: "It should calculate a sales tax"
 code: const newPizza = new Pizza("medium", ["olives", "pepperoni", "green onions"])
       newPizza.cost()
 expected output: 18.71
+
+Describe: PizzaIndex()
+
+Test: "It should create an object that contains an index of Pizza objects"
+code: let newIndex = new PizzaIndex()
+expected output: newIndex([])

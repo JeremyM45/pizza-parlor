@@ -22,22 +22,30 @@ Pizza.prototype.cost  = function()  {
 };
 
 $(document).ready(function()  {
-  let displaySize = $("#display-size");
-  let displayToppings = $("#display-toppings");
-  let displayPrice = $("#display-price");
-  $("form#pizza").submit(function(e)  {
+  const displaySize = $("#display-size");
+  const displayToppings = $("#display-toppings");
+  const displayPrice = $("#display-price");
+  const pizzaNumForm = $("form#number-of-Pizzas")
+  const customizePizzaForm = $("#pizza")
+  $("form#number-of-Pizzas").submit(function(e)  {
     e.preventDefault();
-    let size = $("#size").val();
-    let toppings = [];
-    $("input:checked").each(function() {
-      toppings.push($(this).val());
+    pizzaNum = $("#pizza-num").val();
+    pizzaNumForm.hide();
+    customizePizzaForm.show();
+    $("form#pizza").submit(function(e)  {
+      e.preventDefault();
+      let size = $("#size").val();
+      let toppings = [];
+      $("input:checked").each(function() {
+        toppings.push($(this).val());
+      })
+      const newPizza = new Pizza(size, toppings);
+      newPizza.cost();
+      displaySize.text(newPizza.size + " Pizza");
+      displayToppings.text("Toppings: " + newPizza.toppings);
+      displayPrice.text("Price: $" + newPizza.price);
+      $("#panucci").show();
+      $("#ComeON").get(0).play();
     })
-    const newPizza = new Pizza(size, toppings);
-    newPizza.cost();
-    displaySize.text(newPizza.size + " Pizza");
-    displayToppings.text("Toppings: " + newPizza.toppings);
-    displayPrice.text("Price: $" + newPizza.price);
-    $("#panucci").show();
-    $("#ComeON").get(0).play();
   })
 })
