@@ -1,9 +1,10 @@
 function PizzaIndex() {
-  this.pizzas = []
+  this.pizzas = {}
   this.id = 0
 }
 PizzaIndex.prototype.addPizza = function(pizza)  {
-  this.pizzas.push(pizza);
+  pizza.id = this.pizzaId();
+  this.pizzas[pizza.id] = pizza;
 };
 PizzaIndex.prototype.pizzaId = function() {
   this.id += 1
