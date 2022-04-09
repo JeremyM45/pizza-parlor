@@ -1,5 +1,6 @@
 function PizzaIndex() {
   this.pizzas = []
+  this.id = 0
 }
 PizzaIndex.prototype.addPizza = function(pizza)  {
   this.pizzas.push(pizza);

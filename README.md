@@ -38,4 +38,16 @@ Test: "It should add a pizza object to a PizzaIndex object's pizzas array."
 code: let newIndex = new PizzaIndex()
       const newPizza = new Pizza("medium", ["olives", "pepperoni", "green onions"])
       newIndex.addPizza(newPizza)
-expected output: newIndex([newPizza])
+expected output: newIndex(0: newPizza (size: "medium", toppings: ["olives", "pepperoni", "green onions"]))
+
+Test: "It should add to Pizza Index based off of pizza id"
+code: let newIndex = new PizzaIndex()
+      const newPizza = new Pizza("medium", ["olives", "pepperoni", "green onions"])
+      newIndex.addPizza(newPizza)
+expected output newIndex[1: newPizza (size: "medium",toppings: ["olives", "pepperoni", "green onions"],id: 1)
+
+Describe PizzaIndex.prototype.pizzaId()
+
+This: "it should assign an ID to a pizza object"
+code: newIndex.pizzas[0].pizzaId()
+expected output: newIndex[0: newPizza (size: "medium",toppings: ["olives", "pepperoni", "green onions"],id: 1) 
