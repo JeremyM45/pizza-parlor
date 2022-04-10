@@ -9,7 +9,13 @@ PizzaIndex.prototype.addPizza = function(pizza)  {
 PizzaIndex.prototype.pizzaId = function() {
   this.id += 1
   return this.id
-}; 
+};
+PizzaIndex.prototype.totalCost = function() {
+  for (i = 1; i <= this.id; i++) {
+    console.log(this.pizzas[i])
+    console.log("test")
+  }
+};
 function Pizza(size, toppings)  {
   this.size = size;
   this.toppings = toppings;
@@ -57,7 +63,7 @@ $(document).ready(function()  {
       let newPizza = new Pizza(size, toppings);
       newPizza.cost();
       pizzaIndex.addPizza(newPizza)
-      console.log(pizzaIndex.id)
+      pizzaIndex.totalCost();
       displaySize.text(newPizza.size + " Pizza");
       displayToppings.text("Toppings: " + newPizza.toppings);
       displayPrice.text("Price: $" + newPizza.price);

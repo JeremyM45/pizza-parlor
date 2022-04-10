@@ -206,3 +206,15 @@ code: newIndex.totalCost()
 expected output: (pizza1)
                  (pizza2)
                  (pizza3)
+
+-------------------------------------------------------- 
+
+Test: "It should add up a total cost based on each pizza objects price"
+
+code: const pizza1 = new Pizza("medium", ["olives", "pepperoni", "green onions"])
+      const pizza2 = new Pizza("medium", ["olives", "pepperoni", "green onions"])
+      newIndex.addPizza(pizza1)
+      newIndex.addPizza(pizza2)
+      newIndex.totalCost()
+
+expected output: 37.42
