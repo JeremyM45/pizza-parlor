@@ -11,10 +11,13 @@ PizzaIndex.prototype.pizzaId = function() {
   return this.id
 };
 PizzaIndex.prototype.totalCost = function() {
+  let total = 0
+  let price = 0
   for (i = 1; i <= this.id; i++) {
-    console.log(this.pizzas[i])
-    console.log("test")
+    price = parseFloat(this.pizzas[i].price)
+    total += price
   }
+  return total.toFixed(2)
 };
 function Pizza(size, toppings)  {
   this.size = size;
@@ -44,9 +47,10 @@ $(document).ready(function()  {
   const displayToppings = $("#display-toppings");
   const displayPrice = $("#display-price");
   const displayNumOfPizzas = $("#display-num-of-pizzas");
+  const displayTotalCost = $("#display-total-cost")
   const displayAddress = $("#display-address");
   const customizePizzaForm1 = $("form#one-pizza");
-  const addressForm = $("form#addressForm")
+  const addressForm = $("form#addressForm");
   let pizzaIndex = new PizzaIndex();
   $(addressForm).submit(function(e)  {
     e.preventDefault();
@@ -67,7 +71,8 @@ $(document).ready(function()  {
       displaySize.text(newPizza.size + " Pizza");
       displayToppings.text("Toppings: " + newPizza.toppings);
       displayPrice.text("Price: $" + newPizza.price);
-      displayNumOfPizzas.text("Number of Pizzas: " + pizzaIndex.id)
+      displayNumOfPizzas.text("Number of Pizzas: " + pizzaIndex.id);
+      displayTotalCost.text("Total: $" + pizzaIndex.totalCost())
       displayAddress.text("Deliver to: " + address)
       $("#panucci").show();
       $("#ComeON").get(0).play();
