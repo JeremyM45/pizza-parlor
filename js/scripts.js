@@ -49,17 +49,21 @@ $(document).ready(function()  {
   const displayNumOfPizzas = $("#display-num-of-pizzas");
   const displayTotalCost = $("#display-total-cost")
   const displayAddress = $("#display-address");
-  const customizePizzaForm1 = $("form#one-pizza");
   const addressForm = $("form#addressForm");
+  const addressInput = $("#address");
+  const customizePizzaForm1 = $("form#one-pizza");
+  const pizzaSize = $("#size")
+  const audio = $("#ComeON")
+  const panucci = $("#panucci")
   let pizzaIndex = new PizzaIndex();
   $(addressForm).submit(function(e)  {
     e.preventDefault();
-    const address = $("#address").val();
+    const address = addressInput.val();
     addressForm.hide();
     customizePizzaForm1.show();
     $(customizePizzaForm1).submit(function(e)  {
       e.preventDefault();
-      let size = $("#size").val();
+      let size = pizzaSize.val();
       let toppings = [];
       $("input:checked").each(function() {
         toppings.push($(this).val());
@@ -74,8 +78,8 @@ $(document).ready(function()  {
       displayNumOfPizzas.text("Number of Pizzas: " + pizzaIndex.id);
       displayTotalCost.text("Total: $" + pizzaIndex.totalCost())
       displayAddress.text("Deliver to: " + address)
-      $("#panucci").show();
-      $("#ComeON").get(0).play();
+      panucci.show();
+      audio.get(0).play();
     })
   })
 })
