@@ -16,7 +16,6 @@ function Pizza(size, toppings)  {
   this.price = 0;
 }
 Pizza.prototype.cost  = function()  {
-  console.log(this.size)
   if (this.size === 'Small 10"')  {
     this.price += 9.99;
   } else if (this.size === 'Medium 12"')  {
@@ -38,6 +37,7 @@ $(document).ready(function()  {
   const displaySize = $("#display-size");
   const displayToppings = $("#display-toppings");
   const displayPrice = $("#display-price");
+  const displayNumOfPizzas = $("#display-num-of-pizzas");
   const displayAddress = $("#display-address");
   const customizePizzaForm1 = $("form#one-pizza");
   const addressForm = $("form#addressForm")
@@ -45,7 +45,6 @@ $(document).ready(function()  {
   $(addressForm).submit(function(e)  {
     e.preventDefault();
     const address = $("#address").val();
-    console.log(address)
     addressForm.hide();
     customizePizzaForm1.show();
     $(customizePizzaForm1).submit(function(e)  {
@@ -58,9 +57,11 @@ $(document).ready(function()  {
       let newPizza = new Pizza(size, toppings);
       newPizza.cost();
       pizzaIndex.addPizza(newPizza)
+      console.log(pizzaIndex.id)
       displaySize.text(newPizza.size + " Pizza");
       displayToppings.text("Toppings: " + newPizza.toppings);
       displayPrice.text("Price: $" + newPizza.price);
+      displayNumOfPizzas.text("Number of Pizzas: " + pizzaIndex.id)
       displayAddress.text("Deliver to: " + address)
       $("#panucci").show();
       $("#ComeON").get(0).play();

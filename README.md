@@ -184,10 +184,10 @@ expected output newIndex[1: newPizza (size: "medium",toppings: ["olives", "peppe
   ``````````````````````````````````````````````````````````````````  
   
  `````````````````````````````````````````````````````````````````` 
-Describe PizzaIndex.prototype.pizzaId()
+Describe: PizzaIndex.prototype.pizzaId()
 
 
-This: "it should assign an ID to a pizza object"
+Test: "it should assign an ID to a pizza object"
 
 code: newIndex.pizzas[0].pizzaId()
 
@@ -195,3 +195,14 @@ expected output: newIndex[0: newPizza (size: "medium",toppings: ["olives", "pepp
 
 -------------------------------------------------------- 
  `````````````````````````````````````````````````````````````````` 
+ ``````````````````````````````````````````````````````````````````
+
+Describe: PizzaIndex.prototype.totalCost()
+
+Test: "It should loop through the pizza objects in PizzaIndex.pizzas"
+
+code: newIndex.totalCost()
+      console.log(this.pizzas[i])
+expected output: (pizza1)
+                 (pizza2)
+                 (pizza3)
