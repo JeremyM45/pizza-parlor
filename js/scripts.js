@@ -1,23 +1,23 @@
 function PizzaIndex() {
-  this.pizzas = {}
-  this.id = 0
+  this.pizzas = {};
+  this.id = 0;
 }
 PizzaIndex.prototype.addPizza = function(pizza)  {
   pizza.id = this.pizzaId();
   this.pizzas[pizza.id] = pizza;
 };
 PizzaIndex.prototype.pizzaId = function() {
-  this.id += 1
-  return this.id
+  this.id += 1;
+  return this.id;
 };
 PizzaIndex.prototype.totalCost = function() {
-  let total = 0
-  let price = 0
-  for (i = 1; i <= this.id; i++) {
-    price = parseFloat(this.pizzas[i].price)
-    total += price
+  let total = 0;
+  let price = 0;
+  for (let i = 1; i <= this.id; i++) {
+    price = parseFloat(this.pizzas[i].price);
+    total += price;
   }
-  return total.toFixed(2)
+  return total.toFixed(2);
 };
 function Pizza(size, toppings)  {
   this.size = size;
@@ -34,7 +34,7 @@ Pizza.prototype.cost  = function()  {
   } else if (this.size === 'X-Large 16"') {
     this.price += 18.99;
   }
-  for (i = 0; i < this.toppings.length; i++)  {
+  for (let i = 0; i < this.toppings.length; i++)  {
     this.price += 1.50;
   }
   this.price *= 1.07;
@@ -47,14 +47,14 @@ $(document).ready(function()  {
   const displayToppings = $("#display-toppings");
   const displayPrice = $("#display-price");
   const displayNumOfPizzas = $("#display-num-of-pizzas");
-  const displayTotalCost = $("#display-total-cost")
+  const displayTotalCost = $("#display-total-cost");
   const displayAddress = $("#display-address");
   const addressForm = $("form#addressForm");
   const addressInput = $("#address");
   const customizePizzaForm1 = $("form#one-pizza");
-  const pizzaSize = $("#size")
-  const audio = $("#ComeON")
-  const panucci = $("#panucci")
+  const pizzaSize = $("#size");
+  const audio = $("#ComeON");
+  const panucci = $("#panucci");
   let pizzaIndex = new PizzaIndex();
   $(addressForm).submit(function(e)  {
     e.preventDefault();
@@ -67,19 +67,19 @@ $(document).ready(function()  {
       let toppings = [];
       $("input:checked").each(function() {
         toppings.push($(this).val());
-      })
+      });
       let newPizza = new Pizza(size, toppings);
       newPizza.cost();
-      pizzaIndex.addPizza(newPizza)
+      pizzaIndex.addPizza(newPizza);
       pizzaIndex.totalCost();
       displaySize.text(newPizza.size + " Pizza");
       displayToppings.text("Toppings: " + newPizza.toppings);
       displayPrice.text("Price: $" + newPizza.price);
       displayNumOfPizzas.text("Number of Pizzas: " + pizzaIndex.id);
-      displayTotalCost.text("Total: $" + pizzaIndex.totalCost())
-      displayAddress.text("Deliver to: " + address)
+      displayTotalCost.text("Total: $" + pizzaIndex.totalCost());
+      displayAddress.text("Deliver to: " + address);
       panucci.show();
       audio.get(0).play();
-    })
-  })
-})
+    });
+  });
+});
